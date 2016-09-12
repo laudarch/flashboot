@@ -95,10 +95,10 @@ want to build. You should also change URLBASE to match a mirror near you.
 build-release will download, patch and build userland automatically
 
 This build can take a very long time. Make sure you run this in the 
-flashboot-directory and with sudo since the script needs to be able
+flashboot-directory and with doas since the script needs to be able
 to mount devices.
 
-    # sudo ./build-release.sh
+    # doas ./build-release.sh
 
 When the building is done you should have a fully dynamic release in
 sandbox. Now it's time to make your kernel. The
@@ -107,7 +107,7 @@ COMMELL-LE564, GENERIC-RD, NTFS, SOEKRIS4501, SOEKRIS4521,
 SOEKRIS4801, SOEKRIS5501 and WRAP12 configs are provided. You can
 easily make your own by copying one of the existing. 
     
-    # sudo ./build-kernel.sh WRAP12
+    # doas ./build-kernel.sh WRAP12
 
 The kernel is then stored under the obj/ directory. The use of
 a gzipped kernel is preferred. The bootloader automatically extracts
@@ -172,7 +172,7 @@ To create an iso image suitable for booting and running flashboot on a x86 PC,
 first read the build instructions above. Step 1 and 2 must be successful and
 in step 3 use the build-livecd.sh script with the GENERIC-RD kernel config.
 
-    # sudo ./build-livecd.sh GENERIC-RD
+    # doas ./build-livecd.sh GENERIC-RD
 
 The build-live_cd.sh script will create the directory live_cd before creating
 the image. Everything in this directory will be included on the cd. The files

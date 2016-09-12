@@ -4,7 +4,7 @@ CWD=`pwd`
 WORKDIR=sandbox
 
 if ! [ -d ${CWD}/${WORKDIR}/dev  ]; then
-  echo "You have no sandbox to play with yet. Run sudo ./build-release.sh first"
+  echo "You have no sandbox to play with yet. Run doas ./build-release.sh first"
   exit
 fi
 

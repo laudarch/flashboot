@@ -26,7 +26,7 @@ fi
 
 # Quick test to see if sandbox exist
 if ! [ -d ${CWD}/${WORKDIR}/dev  ]; then
-  echo "You must build your release first. Run sudo ./build-release.sh"
+  echo "You must build your release first. Run doas ./build-release.sh"
   exit
 fi
 

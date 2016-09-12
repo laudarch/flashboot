@@ -29,6 +29,14 @@ cp obj/bsd.gz bindist/${DISTNAME}.bsd
 gzip image
 mv image.gz bindist/${DISTNAME}.image
 
+DISTNAME=RAGE
+export TTYSPEED=38400
+./build-kernel.sh ${DISTNAME}
+cp obj/bsd.gz bindist/${DISTNAME}.bsd
+./build-diskimage.sh image
+gzip image
+mv image.gz bindist/${DISTNAME}.image
+
 DISTNAME=COMMELL-LE564
 export TTYSPEED=19200
 ./build-kernel.sh ${DISTNAME}

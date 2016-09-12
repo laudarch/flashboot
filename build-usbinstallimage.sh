@@ -17,7 +17,7 @@ URLBASE="http://ftp.eu.openbsd.org/pub/OpenBSD/${LONGREL}"
 
 # No need to change anything below this line for new OS releases!
 CWD=`pwd`
-SUDO=sudo
+SUDO=doas
 DEVICE=vnd0
 DEVICECD=vnd1
 SOURCECD=install${SHORTREL}.iso
